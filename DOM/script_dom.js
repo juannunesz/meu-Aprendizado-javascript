@@ -30,8 +30,8 @@ function distribuiCaractere(){
             // Adicionar o caracter no campo referente a letras
            document.getElementById('apenas_letras').value += caracter
     }       
-
 }
+
 
 function limaparValores() {
 
