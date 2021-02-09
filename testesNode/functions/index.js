@@ -1,4 +1,4 @@
-/*
+
 function calcularAreaSquare(largura,comprimento){
   if(largura == 0 || comprimento == 0){
     return "Não foi possivel calcular"
@@ -85,7 +85,7 @@ var numero = Math.random() // gera um numero aleatorio entre 0 e 1
 
 console.log(numero)
 
-*/
+
 
 // propiedades datas
 
