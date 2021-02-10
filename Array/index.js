@@ -1,4 +1,4 @@
-/*
+
 var lista_frutas = ['Banana','maça','Morango','Uva']
 
 lista_frutas[0] = 'Banana'
@@ -85,7 +85,6 @@ if(lista_frutas.indexOf('Abacaxi') == -1){
 
 console.log(lista_frutas)
 
-*/
 
 // Ordenando array
 
@@ -100,3 +99,5 @@ console.log(lista_numeros.sort(ordenaNumeros))
 function ordenaNumeros(a,b){
   return a - b
 }
+
+
