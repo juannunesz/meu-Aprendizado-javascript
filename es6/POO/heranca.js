@@ -1,4 +1,4 @@
-
+// Animal
 class Animal{
   constructor(cor, tamanho){
     this.cor = cor
@@ -10,7 +10,7 @@ class Animal{
   }
 }
 
-
+//Cachorro 
 class Cachorro extends Animal{
   constructor(){
     super('preto',30)
@@ -25,11 +25,11 @@ class Cachorro extends Animal{
   }
 }
 
-
+// Passaro
 class Passaro extends Animal{
-  constructor(){
-    super('verde',10)
-    this.bico = 'Pontudo'
+  constructor(bico,cor,tamanho){
+    super(cor,tamanho)
+    this.bico = bico
   }
 
   voar(){
@@ -37,10 +37,36 @@ class Passaro extends Animal{
   }
 }
 
-let cachorro = new Cachorro()
-let passaro = new Passaro()
+// Papagaio
+class Papagaio extends Passaro {
+  constructor(sabeFalar,cor,tamanho,bico){
+    super(bico,cor,tamanho)
+    this.sabeFalar = sabeFalar
+  }
 
-console.log(cachorro)
-console.log(passaro)
+  falar(){
+    console.log('Falando...')
+  }
+}
 
-cachorro.dormir()
+//Avestruz 
+class Avestruz extends Passaro{
+  constructor(){
+    super()
+  }
+
+  enterrarCabeca(){
+    console.log('Enterrando cabeça')
+  }
+}
+
+
+let papagaio1 = new Papagaio(tru0e,'Verde',25,'Medio')
+console.log(papagaio1)
+papagaio1.voar()
+
+let avestruz1 = new Avestruz()
+
+
+
+
