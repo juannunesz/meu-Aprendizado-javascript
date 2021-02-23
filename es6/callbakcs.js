@@ -1,8 +1,10 @@
-function newButton(text){
+function newButton(text, callback){
 
   const $body = document.querySelector('body');
   
   const $button = document.createElement('button');
+
+  callback($button,$body)
   
   $button.textContent = text;
   
@@ -11,29 +13,24 @@ function newButton(text){
   return $button
 }
 
-const login = newButton('Login')
-const singUp = newButton('Sing Up')
+ newButton('Login', (button,body) => {
+  button.style.cssText = `
+    font-size :100px;
+  `
+  button.addEventListener('click', () => {
+    document.write('OI')
+  })
+ })
+ newButton('Sing Up', (button) => {
+  button.style.cssText = `
+    font-size: 80px;
+    color: red;
+    background: black;
+  `
+ })
 
-console.log(login)
-console.log(singUp)
 
-login.style.cssText = `
-  color: red;
-`
 
-login.addEventListener('click', () => {
-  console.log('Fazendo login');
-})
-
-singUp.style.cssText = `
-  color: green;
-  text-transform: uppercase;
-  background: black;
-`
-
-singUp.addEventListener('click', () => {
-  console.log('Fazendo login');
-})
 
 
 
